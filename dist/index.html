@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="css/fonts.min.css" />
+		<link rel="stylesheet" href="css/style.min.css" />
+		<link rel="stylesheet" href="css/responsive.min.css" />
+
+		<title>МАРС</title>
+	</head>
+	<body>
+		<div class="bg">
+			<div class="bg-space"></div>
+
+			<div class="bg-fog"></div>
+		</div>
+
+		<header class="header">
+			<div class="header-logo">
+				<img src="assets/logo.svg" alt="MARS" />
+			</div>
+
+			<div class="header__menu" id="menu">
+				<button id="menu-close">
+					<img src="assets/cross.svg" alt="close" />
+				</button>
+
+				<nav class="header__nav">
+					<ul>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link">О марсе</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link">Процесс</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link">Билеты</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link">Новости</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+
+				<button class="header__menu-button">Купить билеты</button>
+			</div>
+
+			<div class="header__burger" id="menu-open">
+				<div class="header__burger-item"></div>
+				<div class="header__burger-item"></div>
+				<div class="header__burger-item"></div>
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main-line"></div>
+			<div class="main__content">
+				<h2 class="main-title">Точка назначения:</h2>
+				<div class="main-video">
+					<video src="assets/Mars.m4v" autoplay muted loop></video>
+
+					<svg height="0" width="0">
+						<clipPath id="svgTextPath">
+							<text id="svg-text" x="-29" y="509">МАРС</text>
+						</clipPath>
+					</svg>
+				</div>
+			</div>
+		</main>
+
+		<div class="ticket-popup">
+			<div class="ticket-popup__wrapper">
+				<div class="ticket-popup__top">
+					<h2 class="ticket-popup__title">Бронирование билетов</h2>
+
+					<button class="ticket-popup__close-button">
+						<img src="assets/cross.svg" alt="close" />
+					</button>
+				</div>
+
+				<form class="ticket-popup__form">
+					<div class="ticket-popup__selection">
+						<div class="ticket-popup__selection-item">
+							<h3 class="ticket-popup__selection-item-title">
+								Дата заезда
+							</h3>
+							<div
+								class="ticket-popup__selection-item-select"
+								id="date-register"
+							>
+								13.05.2022
+							</div>
+							<ul
+								class="ticket-popup__selection-list"
+								id="date-register-list"
+							>
+								<div
+									class="ticket-popup__selection-item-select"
+								>
+									13.05.2022
+								</div>
+								<div
+									class="ticket-popup__selection-item-select"
+								>
+									13.05.2024
+								</div>
+								<div
+									class="ticket-popup__selection-item-select"
+								>
+									13.05.2026
+								</div>
+							</ul>
+						</div>
+						<div class="ticket-popup__selection-item">
+							<h3 class="ticket-popup__selection-item-title">
+								Дата выезда
+							</h3>
+							<div
+								class="ticket-popup__selection-item-select"
+								id="date-departure"
+							>
+								13.05.2032
+							</div>
+
+							<ul
+								class="ticket-popup__selection-list"
+								id="date-departure-list"
+							>
+								<div
+									class="ticket-popup__selection-item-select"
+								>
+									13.05.2032
+								</div>
+								<div
+									class="ticket-popup__selection-item-select"
+								>
+									13.05.2034
+								</div>
+								<div
+									class="ticket-popup__selection-item-select"
+								>
+									13.05.2036
+								</div>
+							</ul>
+						</div>
+						<div class="ticket-popup__selection-item">
+							<h3 class="ticket-popup__selection-item-title">
+								Количество
+							</h3>
+
+							<div
+								class="ticket-popup__selection-item-select"
+								id="persons-number"
+							>
+								1 человек
+							</div>
+
+							<ul
+								class="ticket-popup__selection-list"
+								id="persons-number-list"
+							>
+								<div
+									class="ticket-popup__selection-item-select"
+								>
+									1 человек
+								</div>
+								<div
+									class="ticket-popup__selection-item-select"
+								>
+									2 человека
+								</div>
+								<div
+									class="ticket-popup__selection-item-select"
+								>
+									3 человека
+								</div>
+							</ul>
+						</div>
+					</div>
+
+					<div class="ticket-popup__form-bottom">
+						<button class="ticket-popup__buy-button">
+							Купить билеты
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
