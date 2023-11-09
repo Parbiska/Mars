@@ -1,0 +1,219 @@
+@keyframes ticket-popup {}
+
+.ticket-popup {
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    background-color: var(--primary-light);
+
+    &.show {
+        display: block;
+    }
+
+    &__wrapper {
+        @include container;
+
+        padding-top: 100px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        width: 588px;
+
+        font-family: Bebas Neue;
+        font-size: 114px;
+        font-weight: 700;
+        letter-spacing: 2.85px;
+
+        text-transform: uppercase;
+    }
+
+    &__close-button {
+        @include button;
+        border-radius: 0;
+
+        width: 32px;
+        height: 32px;
+
+        transition: all 0.1s;
+
+        background-color: var(--greyscale-black);
+
+        &:hover {
+
+            background-color: var(--primary-orange);
+        }
+    }
+
+    &__form {
+
+        margin-top: 80px;
+
+        &-bottom {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__selection {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            width: 387px;
+            position: relative;
+
+
+            &-title {
+                font-weight: 700;
+            }
+
+            &-select {
+                width: 387px;
+                height: 32px;
+
+                margin-top: 20px;
+                padding-bottom: 10px;
+
+                border-bottom: 2px solid var(--greyscale-black);
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-list {
+            display: none;
+
+            position: absolute;
+            z-index: 2;
+            top: 16px;
+
+            background-color: var(--primary-light);
+
+            &.show {
+                display: block;
+            }
+        }
+    }
+
+    &__buy-button {
+        @include button;
+
+        width: 387px;
+        height: 40px;
+
+        margin-top: 60px;
+
+        background: var(--greyscale-black);
+
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--primary-light);
+
+        text-transform: uppercase;
+
+        transition: all 0.1s;
+
+        &:hover {
+
+            background-color: var(--primary-orange);
+        }
+    }
+}
+
+
+@media (max-width: 1299px) {
+    .ticket-popup {
+        overflow-y: auto;
+
+        padding-bottom: 40px;
+
+        &__form {
+            margin-top: 40px;
+        }
+
+        &__selection {
+            flex-wrap: wrap;
+
+
+            &-item {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 980px) {
+    .ticket-popup {
+        &__title {
+            font-size: 90px;
+        }
+
+        &__form {
+            &-bottom {
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .ticket-popup {
+
+        &__title {
+            font-size: 70px;
+        }
+
+
+
+        &__selection {
+
+            &-item {
+                width: 100%;
+
+
+
+                &-select {
+                    width: 100%;
+                }
+            }
+
+            &-list {
+                width: 100%;
+            }
+        }
+
+        &__buy-button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .ticket-popup {
+
+        &__title {
+            font-size: 56px;
+        }
+
+        &__close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
+}
