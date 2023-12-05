@@ -1,8 +1,8 @@
 const bg = document.querySelector('.bg');
 
-if (window.innerWidth >= 1300) {
-	setTimeout(() => {
-		window.addEventListener('mousemove', function (e) {
+setTimeout(() => {
+	window.addEventListener('mousemove', function (e) {
+		if (window.innerWidth >= 1300) {
 			const x = e.clientX;
 			const a = window.innerWidth / 3;
 
@@ -13,9 +13,9 @@ if (window.innerWidth >= 1300) {
 			} else if (x >= 2 * a) {
 				bg.style.transform = 'translate(-8%)';
 			}
-		});
-	}, 4000);
-}
+		}
+	});
+}, 4000);
 
 const svgText = document.querySelector('#svg-text');
 
@@ -31,6 +31,25 @@ if (window.innerWidth <= 540) {
 } else if (window.innerWidth <= 1299) {
 	svgText.setAttribute('y', '400');
 }
+
+window.addEventListener('resize', () => {
+	if (window.innerWidth <= 540) {
+		svgText.setAttribute('x', '-7');
+		svgText.setAttribute('y', '146');
+	} else if (window.innerWidth <= 730) {
+		svgText.setAttribute('x', '-10');
+		svgText.setAttribute('y', '250');
+	} else if (window.innerWidth <= 980) {
+		svgText.setAttribute('x', '-20');
+		svgText.setAttribute('y', '320');
+	} else if (window.innerWidth <= 1299) {
+		svgText.setAttribute('y', '400');
+	} else if (window.innerWidth > 1299) {
+		svgText.setAttribute('x', '-29');
+		svgText.setAttribute('y', '509');
+	}
+	bg.style.transform = `translate(0)`;
+});
 
 const menu = document.querySelector('#menu');
 const menuOpenButton = document.querySelector('#menu-open');
